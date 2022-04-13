@@ -1,0 +1,29 @@
+{
+  "name": "epam-atf",
+  "version": "1.0.0",
+  "description": "Studying EPAM course for Automated Testing Foundation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xzfantom/epam-atf-js.git"
+  },
+  "keywords": [
+    "study",
+    "automated",
+    "testing",
+    "foundation",
+    "epam"
+  ],
+  "author": "Artsiom Martynau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xzfantom/epam-atf-js/issues"
+  },
+  "homepage": "https://github.com/xzfantom/epam-atf-js#readme",
+  "devDependencies": {
+    "fs-extra": "^10.0.1"
+  }
+}
