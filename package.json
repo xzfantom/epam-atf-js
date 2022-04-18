@@ -4,7 +4,8 @@
   "description": "Studying EPAM course for Automated Testing Foundation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "coverage": "nyc npm run test"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/xzfantom/epam-atf-js#readme",
   "devDependencies": {
-    "fs-extra": "^10.0.1"
+    "fs-extra": "^10.0.1",
+    "chai": "^4.3.6"
   }
 }
