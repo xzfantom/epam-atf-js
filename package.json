@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/xzfantom/epam-atf-js#readme",
   "devDependencies": {
+    "chai": "^4.3.6",
     "fs-extra": "^10.0.1",
-    "chai": "^4.3.6"
+    "selenium-webdriver": "^4.1.1"
   }
 }
