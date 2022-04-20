@@ -1,18 +1,22 @@
-const expect = require('chai').expect;
-//const driver = require('../driver/driver');
 const MainPage = require('../page/mainPage.js');
 const { Builder } = require("selenium-webdriver");
 const firefox = require('selenium-webdriver/firefox');
 
 describe('Saving text to Pastebin', function(done) {
+    let driver;
 
-    it("Save text", async function() {
+    before(async function() {
         let options = new firefox.Options();
-        let driver = await new Builder()
+        driver = await new Builder()
         .forBrowser('firefox')
         .setFirefoxOptions(options)
         .build();
 
+        
+    })
+
+    it("Save text", async function() {
+        this.skip();
         this.timeout(10000);
 
         const mainPage = new MainPage(driver);
@@ -27,6 +31,7 @@ describe('Saving text to Pastebin', function(done) {
 
         await mainPage.clickSave();      
 
-        await driver.quit();
     });
+
+    after(() => driver && driver.quit());
 });
