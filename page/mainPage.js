@@ -1,8 +1,8 @@
-const DefaultPage = require('./defaultPage.js');
+const AbstractPage = require('./abstractPage.js');
 const PastePage = require('./pastePage.js');
 const { By, until } = require("selenium-webdriver");
 
-class MainPage extends DefaultPage{
+class MainPage extends AbstractPage{
     url = "https://pastebin.com"
 
     constructor(driver) { 

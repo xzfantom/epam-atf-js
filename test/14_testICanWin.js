@@ -16,7 +16,7 @@ describe('Saving text to Pastebin', function(done) {
     })
 
     it("Save text", async function() {
-        this.skip();
+
         this.timeout(10000);
 
         const mainPage = new MainPage(driver);

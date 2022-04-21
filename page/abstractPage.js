@@ -1,4 +1,4 @@
-class DefaultPage {
+class AbstractPage {
     driver = null;
 
     constructor(driver){ 
@@ -15,4 +15,4 @@ class DefaultPage {
 
 }
 
-module.exports = DefaultPage;
+module.exports = AbstractPage;

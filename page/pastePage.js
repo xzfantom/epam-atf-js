@@ -1,7 +1,7 @@
-const deafultPage = require('./defaultPage.js');
+const AbstractPage = require('./abstractPage.js');
 const { By } = require("selenium-webdriver");
 
-class PastePage extends deafultPage{
+class PastePage extends AbstractPage{
     
     constructor(driver, url) { 
         super(driver);
