@@ -25,33 +25,37 @@ git reset $ (git commit-tree HEAD ^ {tree} -m "Legacy code")
 git push origin master --force`;
 
         const pasteName = 'how to gain dominance among developers';
+        const syntaxName = 'Bash';
 
         this.timeout(30000);
 
         const mainPage = new MainPage(driver);
-        console.log('Open page');
+
         await mainPage.open();
-        console.log('Write paste');
+
         await mainPage.writePaste(pasteString);
-        console.log('Set Bash');
-        await mainPage.setSyntaxHighlight('Bash');
-        console.log('Set time');
+
+        await mainPage.setSyntaxHighlight(syntaxName);
+
         await mainPage.setExpiration('10 Minutes');
-        console.log('Set name');
+
         await mainPage.setPasteName(pasteName);  
-        console.log('Click save');
+
         const pastePage = await mainPage.clickSave();  
         
         //* Browser page title matches Paste Name / Title
-        title = await pastePage.title();
-        console.log(title);
+        const title = await pastePage.title();
         assert.include(title, pasteName, 'Wrong title');
 
         //* Syntax is suspended for bash
+        const syntax = await pastePage.getHighlightName();
+        assert.equal(syntax, syntaxName);
 
         //* Check that the code matches the one entered in paragraph 2
-
+        const code = await pastePage.getRawPasteText();
+        assert.equal(code, pasteString);
+  
     });
 
-    //after(() => driver && driver.quit());
+    after(() => driver && driver.quit());
 });
