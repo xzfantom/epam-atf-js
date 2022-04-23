@@ -3,7 +3,7 @@
     // Given an array consisting of movie names, iterate over the array with the output of the names of each movie to the console
     console.log("Task 1");
 
-    var movies = [ "The Shawshank Redemption (1994)",
+    const movies = [ "The Shawshank Redemption (1994)",
                "The Godfather (1972)",
                "The Dark Knight (2008)",
                "The Godfather: Part II (1974)",
@@ -22,7 +22,7 @@
     // Given an array of car manufacturers, convert the array to a string and back to an array
     console.log("\nTask 2");
 
-    var manufacturers = [ "Volvo",
+    const manufacturers = [ "Volvo",
                       "Fiat",
                       "Ferrari",
                       "Volkswagen",
@@ -34,17 +34,17 @@
                       "Renault"
                     ];
 
-    var names = manufacturers.join(", ");
+    const names = manufacturers.join(", ");
     console.log(names);
 
-    var manFromString = names.split(", ");
+    const manFromString = names.split(", ");
     console.log(manFromString);
 
     // Task 3
     // Given an array of the names of your friends, add the words hello to each element of the array
     console.log("\nTask 3");
 
-    var friends = [ "Nikita",
+    const friends = [ "Nikita",
                 "Ekaterina",
                 "Vladimir",
                 "Petr",
@@ -52,7 +52,7 @@
                 "Nikolay"
               ];
 
-    var helloFriends = friends.map(item => "Hello "+item);
+    const helloFriends = friends.map(item => "Hello "+item);
 
     console.log(helloFriends);
 
@@ -60,8 +60,8 @@
     // Convert numeric array to Boolean
     console.log("\nTask 4");
 
-    var numericArray = [ 5, 6, 3, 8, 0,1, 0, 4, 3];
-    var booleanArray = numericArray.map(item => Boolean(item));
+    const numericArray = [ 5, 6, 3, 8, 0,1, 0, 4, 3];
+    const booleanArray = numericArray.map(item => Boolean(item));
 
     console.log(booleanArray);
 
@@ -69,8 +69,8 @@
     // Sort the array [1,6,7,8,3,4,5,6] in descending order
     console.log("\nTask 5");
 
-    var sortArray = [1,6,7,8,3,4,5,6];
-    var sortedArray = sortArray.sort((a, b) => b-a);
+    const sortArray = [1,6,7,8,3,4,5,6];
+    const sortedArray = sortArray.sort((a, b) => b-a);
 
     console.log(sortedArray);
 
@@ -78,8 +78,8 @@
     // Filter array [1,6,7,8,3,4,5,6] by value> 3
     console.log("\nTask 6");
 
-    var filterArray = [1,6,7,8,3,4,5,6];
-    var filteredArray = filterArray.filter(value => value > 3);
+    const filterArray = [1,6,7,8,3,4,5,6];
+    const filteredArray = filterArray.filter(value => value > 3);
 
     console.log(filteredArray);
 
@@ -106,9 +106,9 @@
     console.log("\nTask 9");
 
     function isPrime(num){
-        var max = Math.sqrt(num);
+        const max = Math.sqrt(num);
         for (let i = 2; i <= max; i++) {
-            if (num % i == 0) {
+            if (num % i === 0) {
                 return false;
             }
         }
