@@ -1,6 +1,6 @@
-var str = "Test string"
-var bool = true
-var num = 10
+const str = "Test string"
+const bool = true
+const num = 10
 
 console.log(`String + boolean = ${str + bool}`)
 console.log(`String + number  = ${str + num}`)
