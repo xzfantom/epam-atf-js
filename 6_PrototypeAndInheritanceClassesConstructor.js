@@ -2,11 +2,11 @@
 // cat object must inherit move property from object animal
 "use strict"
 
-var animal = {
+let animal = {
     move : 0
 };
 
-var cat = {
+let cat = {
     __proto__ : animal
 };
 
