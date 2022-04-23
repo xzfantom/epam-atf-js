@@ -20,7 +20,7 @@
     try {
         let x = 1/0;
 
-        if (x == Infinity) {
+        if (x === Infinity) {
             throw new Error("cannot be divided by zero");
         } 
     } catch (err) {
