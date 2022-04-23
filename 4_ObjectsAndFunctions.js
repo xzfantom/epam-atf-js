@@ -43,7 +43,7 @@ console.log(acceptFruits(10, 15));
 console.log("\nTask 5");
 
 function defineName (userName) {
-    if (userName == "Artsiom") {
+    if (userName ==="Artsiom") {
         console.log(`Hello ${userName}`);
     } else {
         console.log("There is no such name");
@@ -70,9 +70,9 @@ checkType(10);
 console.log("\nTask 7");
 
 function isPrime(num){
-    var max = Math.sqrt(num);
-    for (var i = 2; i <= max; i++) {
-        if (num % i == 0) {
+    let max = Math.sqrt(num);
+    for (let i = 2; i <= max; i++) {
+        if (num % i === 0) {
             return false;
         }
     }
